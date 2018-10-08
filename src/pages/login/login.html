@@ -1,0 +1,44 @@
+<ion-header color="primary">
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <div margin-top padding-top>
+    <h1 ion-text color="light" text-center margin-top >Bienvenido.</h1>
+  </div>
+
+  <div margin-top>
+    <form>
+      <ion-item margin-top>
+        <ion-label color="light" floating>Usuario</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item margin-top>
+        <ion-label color="light" floating>Contraseña</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-row margin-top>
+        <button ion-button outline margin color="light" padding-right>
+          <ion-icon name="log-in" margin-right></ion-icon>
+          Ingresar
+        </button>
+      </ion-row>
+    </form>
+
+    <h2 margin text-center>¿No tienes una cuenta?</h2>
+
+    <ion-row>
+      <button ion-button outline margin color="light" (click)="onRegistro()">
+        <ion-icon name="bookmarks" margin-right></ion-icon>
+        Registrate
+      </button>
+    </ion-row>
+
+  </div>
+
+</ion-content>
