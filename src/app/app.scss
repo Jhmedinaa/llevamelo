@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// Theme fonts
+$poiret-one-font-path: $font-path !default;
+
+// H1 tittle font
+@font-face {
+    font-family: "Poiret One";
+    src:  url("#{$poiret-one-font-path}/poiretone-regular.ttf") format("truetype");
+  }
+
+h1{
+    font-family: 'Poiret One';
+}
