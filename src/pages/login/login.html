@@ -6,39 +6,65 @@
 
 
 <ion-content padding>
-  <div margin-top padding-top>
-    <h1 ion-text color="light" text-center margin-top >Bienvenido.</h1>
-  </div>
+  <ion-grid align-items-end>
 
-  <div margin-top>
-    <form>
-      <ion-item margin-top>
-        <ion-label color="light" floating>Usuario</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-
-      <ion-item margin-top>
-        <ion-label color="light" floating>Contraseña</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-
-      <ion-row margin-top>
-        <button ion-button outline margin color="light" padding-right>
-          <ion-icon name="log-in" margin-right></ion-icon>
-          Ingresar
-        </button>
-      </ion-row>
-    </form>
-
-    <h2 margin text-center>¿No tienes una cuenta?</h2>
-
-    <ion-row>
-      <button ion-button outline margin color="light" (click)="onRegistro()">
-        <ion-icon name="bookmarks" margin-right></ion-icon>
-        Registrate
-      </button>
+    <ion-row padding>
+      <ion-col></ion-col>
     </ion-row>
 
-  </div>
+    <ion-row padding>
+      <ion-col></ion-col>
+    </ion-row>
 
+    <ion-row padding>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div margin-top padding-top>
+          <h1 ion-text color="black" text-center margin-top>L l é v a m e l o</h1>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div margin-top>
+          <form>
+            <ion-item margin-top>
+              <ion-label color="light" floating>Usuario</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+
+            <ion-item margin-top>
+              <ion-label color="light" floating>Contraseña</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+
+            <ion-row margin-top>
+              <ion-col style="display: inline-block; text-align: center">
+                <button ion-button outline margin color="light" padding-right>
+                  <ion-icon name="log-in" margin-right></ion-icon>
+                  Ingresar
+                </button>
+              </ion-col>
+            </ion-row>
+          </form>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center no-border-top no-border-bottom color="secondary">
+    <ion-label>¿No tienes una cuenta? </ion-label>
+    <h5 (click)="onRegistro()">Registrate.</h5>
+  </ion-toolbar>
+</ion-footer>
