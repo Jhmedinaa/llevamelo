@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
+  <ion-navbar color="ascent">
     <ion-title>Registro {{ usuario == 'remitente' ? 'Remitente': 'Transportista'}}</ion-title>
   </ion-navbar>
 
@@ -30,40 +30,40 @@
         </ion-item>
 
         <ion-item>
-          <ion-label color="light" floating>Documento</ion-label>
+          <ion-label color="dark" floating>Documento</ion-label>
           <ion-input></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label color="light" floating>Nombre(s)</ion-label>
+          <ion-label color="dark" floating>Nombre(s)</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Apellido(s)</ion-label>
+          <ion-label color="dark" floating>Apellido(s)</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Dirección</ion-label>
+          <ion-label color="dark" floating>Dirección</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Telefono</ion-label>
+          <ion-label color="dark" floating>Telefono</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Correo</ion-label>
+          <ion-label color="dark" floating>Correo</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Usuario</ion-label>
+          <ion-label color="dark" floating>Usuario</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Contraseña</ion-label>
+          <ion-label color="dark" floating>Contraseña</ion-label>
           <ion-input></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label color="light" floating>Confirmar Contraseña</ion-label>
+          <ion-label color="dark" floating>Confirmar Contraseña</ion-label>
           <ion-input></ion-input>
         </ion-item>
 
@@ -91,17 +91,17 @@
       </ion-item>
 
       <ion-item>
-        <ion-label color="light" floating>Documento</ion-label>
+        <ion-label color="dark" floating>Documento</ion-label>
         <ion-input></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label color="light" floating>Nombre(s)</ion-label>
+        <ion-label color="dark" floating>Nombre(s)</ion-label>
         <ion-input></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label color="light" floating>Apellido(s)</ion-label>
+        <ion-label color="dark" floating>Apellido(s)</ion-label>
         <ion-input></ion-input>
       </ion-item>
 
@@ -114,36 +114,36 @@
         </ion-item>
 
       <ion-item>
-          <ion-label color="light" floating>Placa</ion-label>
+          <ion-label color="dark" floating>Placa</ion-label>
           <ion-input></ion-input>
         </ion-item>
 
       <ion-item>
-        <ion-label color="light" floating>Dirección</ion-label>
+        <ion-label color="dark" floating>Dirección</ion-label>
         <ion-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="light" floating>Telefono</ion-label>
+        <ion-label color="dark" floating>Telefono</ion-label>
         <ion-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="light" floating>Correo</ion-label>
+        <ion-label color="dark" floating>Correo</ion-label>
         <ion-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="light" floating>Usuario</ion-label>
+        <ion-label color="dark" floating>Usuario</ion-label>
         <ion-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="light" floating>Contraseña</ion-label>
+        <ion-label color="dark" floating>Contraseña</ion-label>
         <ion-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="light" floating>Confirmar Contraseña</ion-label>
+        <ion-label color="dark" floating>Confirmar Contraseña</ion-label>
         <ion-input></ion-input>
       </ion-item>
 
-      <button ion-button outline margin color="light">
+      <button ion-button outline margin color="dark">
           <ion-icon name="bicycle" margin-right></ion-icon>
         Registrar
       </button>
@@ -152,12 +152,12 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar no-border-top no-border-bottom color="secondary">
+  <ion-toolbar no-border-top no-border-bottom color="light">
     <ion-segment [(ngModel)]="usuario" color="primary">
-      <ion-segment-button value="remitente" checked>
+      <ion-segment-button value="remitente" checked color="dark">
         Remitente
       </ion-segment-button>
-      <ion-segment-button value="transportista">
+      <ion-segment-button value="transportista" color="dark">
         Transportista
       </ion-segment-button>
     </ion-segment>
