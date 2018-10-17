@@ -1,15 +1,55 @@
-
 <ion-header>
-  <button ion-button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </button>
-  <ion-navbar>
+
+  <ion-navbar color="ascent">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>L l é v a m e l o</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
 
+<ion-content color="light">
+  <ion-searchbar color="primary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText=""
+    (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-item>
+    <ion-list color="light">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/usuario.png">
+        </ion-avatar>
+        <h2>Poblado</h2>
+        <p>Calle 10 sur</p>
+        <button ion-button clear item-end>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/usuario.png">
+        </ion-avatar>
+        <h2>Samora</h2>
+        <p>Calle 78# 11 55</p>
+        <button ion-button clear item-end>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/usuario.png">
+        </ion-avatar>
+        <h2>Robledo</h2>
+        <p>Calle 78a# 91c 48</p>
+        <button ion-button clear item-end>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-item>
+
+    </ion-list>
+  </ion-item>
 </ion-content>
