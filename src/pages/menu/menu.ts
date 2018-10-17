@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ViewChild } from '@angular/core/src/metadata/di';
 import { Nav } from 'ionic-angular/components/nav/nav';
-
-
-
 
 
 @IonicPage()
@@ -21,7 +17,7 @@ export class MenuPage {
   }
 
   ionViewWillEnter() {
-    //this.nav.setRoot("page-menu-transportista");
+    this.nav.setRoot("MenuTransportistaPage");
   }
 
 }
