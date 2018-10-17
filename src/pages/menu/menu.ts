@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ViewChild } from '@angular/core/src/metadata/di';
+import { Nav } from 'ionic-angular/components/nav/nav';
 
-/**
- * Generated class for the MenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+
+
 
 @IonicPage()
 @Component({
@@ -15,11 +14,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MenuPage {
 
+  @ViewChild(Nav) nav: Nav;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+   
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MenuPage');
+  ionViewWillEnter() {
+    //this.nav.setRoot("page-menu-transportista");
   }
 
 }
