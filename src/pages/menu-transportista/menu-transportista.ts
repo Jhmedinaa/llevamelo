@@ -50,7 +50,7 @@ export class MenuTransportistaPage {
 
   getDetalle(item: EncomiendaModel){
     console.log(item.barrioDestino);
-    this.navCtrl.push("RecadoDetallePage");
+    this.navCtrl.push("RecadoDetallePage", { data: item });
   }
 
 }

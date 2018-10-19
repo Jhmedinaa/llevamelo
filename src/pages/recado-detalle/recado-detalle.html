@@ -16,6 +16,23 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding color="primary" class="content">
+
+  <ion-card>
+    <ion-card-header ion-text text-center>Encomienda Detalle</ion-card-header>
+    <ion-card-content>
+        <ion-item>
+           <h4>Barrio Destino :{{encomienda.barrioDestino}}</h4> 
+           <h4>Dirección Destino: {{ encomienda.direccionDestino }}</h4>
+           <h4>Barrio Recogida: {{ encomienda.barrioRecogida }}</h4>
+           <h4>Dirección Recogida : {{ encomienda.direccionRecogida }} </h4>
+           <h4>Descripción : {{ encomienda.descripcionPaquete}} </h4>
+           <h4>Valor: {{ encomienda.valor | currency:"$":true:"1.0" }}</h4>
+          <button ion-button color="s-primary"> Aplicar 
+              <ion-icon name="bicycle" margin-left ></ion-icon>
+          </button>
+          </ion-item>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

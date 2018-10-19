@@ -7,13 +7,14 @@
 <ion-header>
 
   <ion-navbar color="ascent">
-    <ion-title>Registro {{ usuario == 'remitente' ? 'Remitente': 'Transportista'}}</ion-title>
+    <ion-title>L l é v a m e l o</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <h1> {{ usuario == 'remitente' ? 'Remitente': 'Transportista'}}</h1>
   <div [ngSwitch]="usuario">
     <div *ngSwitchCase="'remitente'">
       <div>
@@ -154,7 +155,7 @@
 <ion-footer>
   <ion-toolbar no-border-top no-border-bottom color="light">
     <ion-segment [(ngModel)]="usuario" color="primary">
-      <ion-segment-button value="remitente" checked color="dark">
+      <ion-segment-button value="remitente" checked color="s-primary">
         Remitente
       </ion-segment-button>
       <ion-segment-button value="transportista" color="dark">
