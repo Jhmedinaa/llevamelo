@@ -10,6 +10,8 @@ import { Nav } from 'ionic-angular/components/nav/nav';
 })
 export class MenuPage {
 
+  pages = [];
+  
   @ViewChild(Nav) nav: Nav;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
