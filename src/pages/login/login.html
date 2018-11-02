@@ -28,23 +28,28 @@
 
           <ion-row margin-top>
             <ion-col style="display: inline-block; text-align: center">
-              <button ion-button  margin color="s-primary" padding-right (click)="onLogin()">
-                <ion-icon name="log-in" margin-right></ion-icon>
-                Ingresar
+              <button ion-button round full color="secondary" (click)="onLogin()">
+                  Ingresar
+                  <ion-icon name="log-in" margin-left></ion-icon>
               </button>
+              
             </ion-col>
           </ion-row>
         </form>
 
         <div>
-          <ion-label>¿No tienes una cuenta? </ion-label>
+          <ion-label>¿Crear una cuenta? </ion-label>
         </div>
        
         <div>
-          <button ion-button  margin color="s-primary" padding-right outline  (click)="onRegistro()">
-            <ion-icon name="log-in" margin-right></ion-icon>
-            Registrate
-          </button>
+          <ion-row>
+            <ion-col>
+              <button ion-button round outline color="s-dark"  (click)="onRegistro()"> Remitente  </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button round outline color="s-dark"  (click)="onRegistro()">Mensajero</button>
+            </ion-col>
+          </ion-row>
         </div>
 
       </div>

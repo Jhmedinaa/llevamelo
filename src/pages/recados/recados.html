@@ -6,13 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>recados</ion-title>
+  <ion-navbar color="ascent">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>L l é v a m e l o</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content color="light"  class="list-avatar-page">
+  <ion-searchbar color="primary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText=""
+    (ionInput)="getItems($event)"></ion-searchbar>
 </ion-content>

@@ -18,6 +18,11 @@
 // Theme fonts
 $poiret-one-font-path: $font-path !default;
 
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
 // H1 tittle font
 @font-face {
     font-family: "Poiret One";

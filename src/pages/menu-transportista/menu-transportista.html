@@ -16,7 +16,7 @@
 
   <ion-item>
     <ion-list color="light" sliding=true>
-      <ion-item *ngFor="let encomienda of encomiendas"  (click)="getDetalle(encomienda)">
+      <button  ion-item  *ngFor="let encomienda of encomiendas"  (click)="getDetalle(encomienda)">
         <ion-avatar item-start>
           <img src="../../assets/imgs/usuario.png">
         </ion-avatar>
@@ -27,8 +27,10 @@
         <button ion-button clear item-end>
           <ion-icon name="arrow-forward"></ion-icon>
         </button>
-      </ion-item>      
+      </button>      
 
     </ion-list>
   </ion-item>
 </ion-content>
+
+
