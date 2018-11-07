@@ -6,13 +6,10 @@
 -->
 <ion-menu [content]="content">
   <ion-header>
-    <ion-navbar hideBackButton="true" color="s-primary" text-center>
-        <ion-title>L l é v a m e l o</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
+   <p>Usuario</p>
+  </ion-header>  
   <ion-content>
-    <ion-list>
+    <ion-list no-lines>
       <button ion-item *ngFor="let pagina of pages" (click)="openPage(pagina.pageName)">
         <ion-icon name="{{pagina.icon}}" item-start></ion-icon>
           {{pagina.title}}
@@ -20,7 +17,7 @@
     </ion-list>
   </ion-content>
 
-  <ion-footer>
+  <ion-footer color="danger">
     <button ion-button color="danger" full  (click)="onClickCerrarSesion()">Cerrar Sesión</button>
   </ion-footer>
 </ion-menu>

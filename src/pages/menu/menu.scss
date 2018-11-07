@@ -1,4 +1,10 @@
 page-menu {
+    ion-header {
+        background-image: url('../../assets/imgs/fondo.jpg');
+        background-size: cover;
+        height: 10em;
+    }
+
     ion-title * {
         font-family: 'Poiret One';
     }

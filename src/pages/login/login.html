@@ -15,39 +15,39 @@
   <ion-row>
     <ion-col>
       <div margin-top>
-        <form>
-          <ion-item margin-top>
-            <ion-label floating>Usuario</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
 
-          <ion-item margin-top>
-            <ion-label  floating>Contraseña</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
+        <ion-item margin-top>
+          <ion-label floating>Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+        </ion-item>
 
-          <ion-row margin-top>
-            <ion-col style="display: inline-block; text-align: center">
-              <button ion-button round full color="secondary" (click)="onLogin()">
-                  Ingresar
-                  <ion-icon name="log-in" margin-left></ion-icon>
-              </button>
-              
-            </ion-col>
-          </ion-row>
-        </form>
+        <ion-item margin-top>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input type="text" [(ngModel)]="user.clave"></ion-input>
+        </ion-item>
+
+        <ion-row margin-top>
+          <ion-col style="display: inline-block; text-align: center">
+            <button ion-button round full color="secondary" (click)="onLogin()">
+              Ingresar
+              <ion-icon name="log-in" margin-left></ion-icon>
+            </button>
+
+          </ion-col>
+        </ion-row>
+
 
         <div>
           <ion-label>¿Crear una cuenta? </ion-label>
         </div>
-       
+
         <div>
           <ion-row>
             <ion-col>
-              <button ion-button round outline color="s-dark"  (click)="onRegistro()"> Remitente  </button>
+              <button ion-button round outline color="s-dark" (click)="onRegistro()"> Remitente </button>
             </ion-col>
             <ion-col>
-              <button ion-button round outline color="s-dark"  (click)="onRegistro()">Mensajero</button>
+              <button ion-button round outline color="s-dark" (click)="onRegistro()">Mensajero</button>
             </ion-col>
           </ion-row>
         </div>

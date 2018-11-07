@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthProvider } from '../../providers/auth/auth';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 
 @IonicPage()
 @Component({
@@ -8,11 +10,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {
+    usuario: 'j',
+    clave: '1'
+  }
+  
+
+  constructor(public navCtrl: NavController, private authProvider: AuthProvider, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    
   }
 
   onRegistro(){
@@ -20,6 +28,20 @@ export class LoginPage {
   }
 
   onLogin(){
-    this.navCtrl.push("MenuPage");
+    this.authProvider.login(this.user.usuario, this.user.clave).then(success => {
+      if(success){
+        this.navCtrl.setRoot("MenuPage");
+      }
+    }).catch(err => {
+      
+      let alert = this.alertCtrl.create({
+        title: 'Ingreso Fallido',
+        message: 'Por favor verifica tus datos.',
+        buttons: ['Entendido']
+      });
+
+      alert.present();
+    });
+    //this.navCtrl.push("MenuPage");
   }
 }

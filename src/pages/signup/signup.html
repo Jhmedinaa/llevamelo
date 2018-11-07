@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="ascent">
+  <ion-navbar color="secondary">
     <ion-title>L l é v a m e l o</ion-title>
   </ion-navbar>
 
@@ -22,56 +22,47 @@
       </div>
 
       <form>
-        <ion-item>
-          <ion-label>Tipo Documento</ion-label>
-          <ion-select>
-            <ion-option value="nes">Cedula Ciudadania</ion-option>
-            <ion-option value="n64">Cedula Extranjera</ion-option>
-          </ion-select>
-        </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Documento</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Nombre(s)</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Apellido(s)</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Dirección</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Telefono</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Correo</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Usuario</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Contraseña</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" floating>Confirmar Contraseña</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
 
-        <ion-item>
-          <ion-label color="dark" floating>Documento</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label color="dark" floating>Nombre(s)</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Apellido(s)</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Dirección</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Telefono</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Correo</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Usuario</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Contraseña</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="dark" floating>Confirmar Contraseña</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-
-        <button ion-button outline margin color="light">
-          <ion-icon name="bookmarks" margin-right></ion-icon>
-          Registrar
-        </button>
+          <button ion-button outline margin color="light">
+            <ion-icon name="bookmarks" margin-right></ion-icon>
+            Registrar
+          </button>
 
       </form>
     </div>
@@ -82,14 +73,6 @@
       <div>
         <h2 text-center color="light">Realiza encomiendas y gana dinero.</h2>
       </div>
-
-      <ion-item>
-        <ion-label>Tipo Documento</ion-label>
-        <ion-select>
-          <ion-option value="nes">Cedula Ciudadania</ion-option>
-          <ion-option value="n64">Cedula Extranjera</ion-option>
-        </ion-select>
-      </ion-item>
 
       <ion-item>
         <ion-label color="dark" floating>Documento</ion-label>
@@ -107,17 +90,17 @@
       </ion-item>
 
       <ion-item magin-top>
-          <ion-label>Tipo Vehículo</ion-label>
-          <ion-select>
-            <ion-option value="nes">Moto</ion-option>
-            <ion-option value="n64">Carro</ion-option>
-          </ion-select>
-        </ion-item>
+        <ion-label>Tipo Vehículo</ion-label>
+        <ion-select>
+          <ion-option value="1">Moto</ion-option>
+          <ion-option value="2">Carro</ion-option>
+        </ion-select>
+      </ion-item>
 
       <ion-item>
-          <ion-label color="dark" floating>Placa</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
+        <ion-label color="dark" floating>Placa</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
 
       <ion-item>
         <ion-label color="dark" floating>Dirección</ion-label>
@@ -145,7 +128,7 @@
       </ion-item>
 
       <button ion-button outline margin color="dark">
-          <ion-icon name="bicycle" margin-right></ion-icon>
+        <ion-icon name="bicycle" margin-right></ion-icon>
         Registrar
       </button>
     </div>
