@@ -6,12 +6,13 @@
 -->
 <ion-menu [content]="content">
   <ion-header padding>
-   <p class="header-data">{{usuario.nombre}}</p>
+   <p class="header-data" style=" font-size: 2em;">{{usuario.nombre}}</p>
+   <p class="header-data">{{usuario.tipoUsuario == 1 ? 'Remitente': 'Transportista'}}</p>
   </ion-header>  
   <ion-content>
     <ion-list no-lines>
       <button ion-item *ngFor="let pagina of pages" (click)="openPage(pagina.pageName)">
-        <ion-icon name="{{pagina.icon}}" item-start></ion-icon>
+        <ion-icon color="primary"name="{{pagina.icon}}" item-start></ion-icon>
           {{pagina.title}}
       </button>
     </ion-list>

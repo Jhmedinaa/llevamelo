@@ -2,8 +2,9 @@ page-menu {
     
 
     ion-header {
-        background-image: url('../../assets/imgs/fondo.jpg');
+        background-image: url('../../assets/imgs/background2.png');
         background-size: cover;
+        background-position-y: 30%;
         height: 10em;
     }
 
@@ -12,7 +13,7 @@ page-menu {
     }
 
     .header-data{
-        font-size: 2em;
-        text-shadow: 2px 1px 0px #fff;
+        color: white;       
+        text-shadow: 2px 1px 0px black;
     }
 }

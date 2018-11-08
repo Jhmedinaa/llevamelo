@@ -16,11 +16,11 @@
     <p text-center color="secondary">Nuevo Servicio</p>
   </ion-item>
 
-  <form >
+  <form [formGroup]="servicio" (ngSubmit)="onSubmit()">
     <ion-list color="danger">
       <ion-item>
         <ion-label floating>Nonbre Remitente</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="nombre_remitente"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -59,7 +59,7 @@
       </ion-item>
     </ion-list>
     <ion-item color="s-secondary">
-      <button ion-button round full color="secondary" >
+      <button ion-button round full color="secondary"  type="submit" [disabled]="!servicio.valid">
         Registrar
       </button>
     </ion-item>
