@@ -41,6 +41,7 @@ $colors: (
   dark:       #000,
   ascent:     #707070,
   s-primary:  #546e7a,
+  s-secondary: #e0e0e0,
   s-light:    #891ca9,
   s-dark:     #1565c0
 );
@@ -50,7 +51,8 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$searchbar-ios-background-color:  #e0e0e0 ;
+$searchbar-ios-input-background-color: #cfcfcf;
 
 
 // App Material Design Variables

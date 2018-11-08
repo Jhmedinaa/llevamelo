@@ -11,6 +11,7 @@ export class SignupPage {
   usuario = 'remitente';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.usuario = navParams.get('data');
   }
 
   ionViewDidLoad() {

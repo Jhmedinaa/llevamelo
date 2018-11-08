@@ -13,8 +13,7 @@ export class LoginPage {
   user = {
     usuario: 'j',
     clave: '1'
-  }
-  
+  }  
 
   constructor(public navCtrl: NavController, private authProvider: AuthProvider, private alertCtrl: AlertController) {
   }
@@ -23,8 +22,8 @@ export class LoginPage {
     
   }
 
-  onRegistro(){
-    this.navCtrl.push("SignupPage");
+  onRegistro(item){
+    this.navCtrl.push("SignupPage",  { data: item });
   }
 
   onLogin(){

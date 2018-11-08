@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Servicio } from '../../models/servicio-model';
 
 @IonicPage()
 @Component({
@@ -9,12 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
 export class RemitenteServiciosPage {
+  encomiendas:Servicio[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public avCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RemitenteServiciosPage');
+  }
+
+  getServicios(){
+
+    
   }
 
 }

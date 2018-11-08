@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, App } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { UsuarioModel } from '../../models/usuario-model';
 
 export interface PageInterface {
   title: string,
@@ -17,15 +18,21 @@ export interface PageInterface {
 export class MenuPage {
 
   pages: PageInterface[];
+  usuario: UsuarioModel;
 
   @ViewChild(Nav) nav: Nav;
 
   constructor(public navCtrl: NavController, private authProvider: AuthProvider, public navParams: NavParams, private appCtrl: App) {
-    
+    this.usuario = this.authProvider.currentUser;
   }
 
   ionViewWillEnter() {
     if (this.authProvider.isRemitente) {
+      this.pages = [
+        { title: 'Inicio', pageName: 'RemitenteServiciosPage', index: 1, icon: 'home' },
+        { title: 'Nuevo Servcio', pageName: 'PublicarServicioPage', index: 1, icon: 'car' },        
+      ];
+
       this.openPage('RemitenteServiciosPage');
     } else {
       this.pages = [
@@ -36,6 +43,8 @@ export class MenuPage {
 
       this.openPage('MenuTransportistaPage');
     }
+
+    
   }
 
   openPage(pagina) {
