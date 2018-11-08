@@ -8,7 +8,6 @@ import { Servicio } from '../../models/servicio-model';
   templateUrl: 'remitente-servicios.html',
 })
 
-
 export class RemitenteServiciosPage {
   encomiendas:Servicio[];
 
@@ -20,7 +19,6 @@ export class RemitenteServiciosPage {
   }
 
   getServicios(){
-
     
   }
 
