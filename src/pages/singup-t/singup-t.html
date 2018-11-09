@@ -9,7 +9,7 @@
 
 <ion-content class="bg">
   <ion-item color="s-secondary">
-    <p text-center color="secondary">Nuevo Remitente</p>
+    <p text-center color="secondary">Nuevo Transportista</p>
   </ion-item>
 
 
@@ -22,7 +22,19 @@
       <ion-item>
         <ion-label floating>Nombre y Apellido(s)</ion-label>
         <ion-input type="text" formControlName="nombre"></ion-input>
-      </ion-item>     
+      </ion-item>
+      <ion-item magin-top>
+        <ion-label>Tipo Vehículo</ion-label>
+        <ion-select formControlName="tipo_vehiculo">
+          <ion-option value="1">Moto</ion-option>
+          <ion-option value="2">Carro</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dark" floating>Placa</ion-label>
+        <ion-input type="text" formControlName="placa"></ion-input>
+      </ion-item>
       <ion-item>
         <ion-label floating>Dirección</ion-label>
         <ion-input type="text" formControlName="direccion"></ion-input>

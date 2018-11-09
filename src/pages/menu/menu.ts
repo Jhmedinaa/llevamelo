@@ -43,9 +43,7 @@ export class MenuPage {
       ];
 
       this.openPage('MenuTransportistaPage');
-    }
-
-    
+    }    
   }
 
   openPage(pagina) {

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 import { Servicio } from '../../models/servicio-model';
 import { RestServicesProvider } from '../../providers/rest-services/rest-services';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { AuthProvider } from '../../providers/auth/auth';
 
 
 @IonicPage()
@@ -15,9 +16,10 @@ export class PublicarServicioPage {
 
   servicio:FormGroup; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider,
     public formBuilder: FormBuilder, public restService:RestServicesProvider, private alertCtrl: AlertController) {
     this.servicio = this.formBuilder.group({
+      id_remitente: [this.authProvider.currentUser.id, Validators.required],
       nombre_remitente: ['', Validators.required],
       direccion_remitente: ['', Validators.required],
       telefono_remitente: ['', Validators.required],

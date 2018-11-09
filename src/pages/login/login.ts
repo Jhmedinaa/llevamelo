@@ -10,37 +10,49 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
 })
 export class LoginPage {
 
+  error = false;
+
   user = {
-    usuario: 'j',
-    clave: '1'
-  }  
+    usuario: '',
+    clave: ''
+  }
 
   constructor(public navCtrl: NavController, private authProvider: AuthProvider, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
-    
+
   }
 
-  onRegistro(item){
-    this.navCtrl.push("SignupPage",  { data: item });
+  onRegistro(item) {
+    if (item == 'remitente') {
+      this.navCtrl.push("SignupPage");
+    } else {
+      this.navCtrl.push("SingupTPage");
+    }
   }
 
-  onLogin(){
-    this.authProvider.login(this.user.usuario, this.user.clave).then(success => {
-      if(success){
-        this.navCtrl.setRoot("MenuPage");
-      }
-    }).catch(err => {
-      
-      let alert = this.alertCtrl.create({
-        title: 'Ingreso Fallido',
-        message: 'Por favor verifica tus datos.',
-        buttons: ['Entendido']
+  onLogin() {
+    this.error = false;
+
+    if (this.user.usuario != '' && this.user.clave != '') {
+      this.authProvider.login(this.user.usuario, this.user.clave).then(success => {
+        if (success) {
+          this.navCtrl.setRoot("MenuPage");
+        }
+      }).catch(err => {
+
+        let alert = this.alertCtrl.create({
+          title: 'Ingreso Fallido',
+          message: 'Por favor verifica tus datos.',
+          buttons: ['Entendido']
+        });
+
+        alert.present();
       });
-
-      alert.present();
-    });
+    }else{
+      this.error = true;
+    }
     //this.navCtrl.push("MenuPage");
   }
 }

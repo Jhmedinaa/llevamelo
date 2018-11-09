@@ -1,41 +1,38 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EncomiendaModel } from '../../models/encomineda-model';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { RestServicesProvider } from '../../providers/rest-services/rest-services';
-import { Servicio } from '../../models/servicio-model';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
-import { AuthProvider } from '../../providers/auth/auth';
-
-/**
- * Generated class for the RecadoDetallePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
-  selector: 'page-recado-detalle',
-  templateUrl: 'recado-detalle.html',
+  selector: 'page-singup-t',
+  templateUrl: 'singup-t.html',
 })
-export class RecadoDetallePage {
+export class SingupTPage {
 
-  servicio:Servicio;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, 
-    public restService:RestServicesProvider, private alertCtrl: AlertController,
-    private authProvider: AuthProvider
+  usuario: FormGroup;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder,
+    public restService:RestServicesProvider, private alertCtrl: AlertController
   ) {
-    this.servicio = navParams.get('data');
-  }
+    this.usuario = this.formBuilder.group({
+      nombre: ['', Validators.required],
+      direccion: ['', Validators.required],
+      documento: ['', Validators.required],
+      telefono: ['', Validators.required],
+      email: ['', Validators.required],
+      placa: ['', Validators.required],
+      tipo_vehiculo: ['', Validators.required],
+      login: ['', Validators.required],
+      password: ['', Validators.required]
+    });
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RecadoDetallePage');
-  }
+  } 
 
-  onSolicitarService(){
-    this.restService.updateServicio(this.authProvider.currentUser.id, 2, this.servicio.id)
-      .subscribe(data => {
+  onSubmit(){
+    this.restService.registrar(2, this.usuario.value)
+      .subscribe(data => {   
         if(!data['isError']){
           let alert = this.alertCtrl.create({
             title: 'Exito!',
@@ -43,14 +40,15 @@ export class RecadoDetallePage {
             buttons: [  {
               text: 'Entendido',
               handler: () => {
-                this.navCtrl.push('MenuTransportistaPage');
+                this.navCtrl.push('LoginPage');
               }
             }]
           });
     
           alert.present();
         }
-      }, error => {
+      }, error =>{
+        console.log(error);
         console.log(error['error'].isError);
         if(error['error'].isError){
           let alert = this.alertCtrl.create({

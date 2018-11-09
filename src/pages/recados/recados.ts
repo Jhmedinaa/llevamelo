@@ -19,7 +19,8 @@ import { Servicio } from '../../models/servicio-model';
 export class RecadosPage {
   encomiendas: Servicio[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider, public restService: RestServicesProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider, 
+    public restService: RestServicesProvider) {
     console.log('id de usuario' + this.authProvider.currentUser.id);
   }
 

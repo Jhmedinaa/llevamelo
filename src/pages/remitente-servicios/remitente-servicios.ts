@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Servicio } from '../../models/servicio-model';
 import { RestServicesProvider } from '../../providers/rest-services/rest-services';
+import { AuthProvider } from '../../providers/auth/auth';
 
 @IonicPage()
 @Component({
@@ -13,7 +14,8 @@ export class RemitenteServiciosPage {
   encomiendas: Servicio[];
   encomiendasFilter: Servicio[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restService: RestServicesProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public restService: RestServicesProvider,  private authProvider: AuthProvider) {
     this.getServicios();
   }
 
@@ -22,11 +24,11 @@ export class RemitenteServiciosPage {
   }
 
   getServicios() {
-    this.restService.getServiciosByRemitente(1).subscribe(
+    this.restService.getServiciosByRemitente(this.authProvider.currentUser.id).subscribe(
       encomiendas => this.encomiendas = encomiendas
     );
 
-    this.restService.getServiciosByRemitente(1).subscribe(
+    this.restService.getServiciosByRemitente(this.authProvider.currentUser.id).subscribe(
       encomiendas => this.encomiendasFilter = encomiendas
     );
   }

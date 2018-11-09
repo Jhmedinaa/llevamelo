@@ -1,9 +1,9 @@
-<ion-header >
+<ion-header>
 
 </ion-header>
 
 <ion-content padding>
-    <div style="height: 200vh;"></div>
+  <div style="height: 200vh;"></div>
 </ion-content>
 
 
@@ -17,6 +17,9 @@
   <ion-row>
     <ion-col>
       <div margin-top>
+        <ion-item color="danger"  *ngIf="error">
+          <p>Faltan Datos Por Completar</p>
+        </ion-item>
 
         <ion-item margin-top>
           <ion-label floating>Usuario</ion-label>
@@ -25,7 +28,7 @@
 
         <ion-item margin-top>
           <ion-label floating>Contraseña</ion-label>
-          <ion-input type="text" [(ngModel)]="user.clave"></ion-input>
+          <ion-input type="password" [(ngModel)]="user.clave"></ion-input>
         </ion-item>
 
         <ion-row margin-top>

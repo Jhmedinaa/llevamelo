@@ -1,5 +1,5 @@
 export class UsuarioModel {
-    id: Number;
+    id: string;
     documento: string;
     nombre: string;
     direccion: string;

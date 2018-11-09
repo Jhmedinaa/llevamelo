@@ -8,7 +8,8 @@ import { Servicio } from '../../models/servicio-model';
 export class RestServicesProvider {
 
   //Url de los servicios
-  urlService: string = 'http://192.168.0.19:3000';
+  //urlService: string = 'http://192.168.0.19:3000';
+  urlService: string = 'http://10.161.57.48:3000';
   headers = new HttpHeaders();
   private httpHeader = new HttpHeaders({ 'Content-Type': 'application/json' });
 
@@ -23,7 +24,7 @@ export class RestServicesProvider {
   }
 
   //Traer lista de servicios
-  getServiciosByRemitente(id: Number): Observable<Servicio[]>{
+  getServiciosByRemitente(id): Observable<Servicio[]>{
     return this.http.get(this.urlService + '/operaciones-microservice/servicios/remitentes/' + id)
     .pipe(
       map(response => response['response'].data as Servicio[])
@@ -51,4 +52,11 @@ export class RestServicesProvider {
   updateServicio(id:Number, estado:Number, servicio: string){
     return this.http.put(this.urlService + '/operaciones-microservice/servicios/' + servicio + '/estados/' + estado, { "id_transportista": id}  , { headers: this.httpHeader });
   }
+
+  //Registrar usuario
+  registrar(tipo:Number, data){
+    return this.http.put(this.urlService + '/terceros-microservice/terceros/tipos/' + tipo, JSON.stringify(data), { headers: this.httpHeader });
+  }
+
+
 }
