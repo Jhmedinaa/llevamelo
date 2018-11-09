@@ -6,6 +6,7 @@ import { UsuarioModel } from '../../models/usuario-model';
 @Injectable()
 export class AuthProvider {
   currentUser: UsuarioModel;
+
   constructor() {
     this.currentUser = new UsuarioModel();
   }
@@ -15,7 +16,7 @@ export class AuthProvider {
       if (usuario === 'j' && clave === '1') {
         this.currentUser.id = 1;
         this.currentUser.nombre = 'jhon medina';
-        this.currentUser.tipoUsuario = 1;
+        this.currentUser.tipoUsuario = 2;
         
         resolve(true);
       } else {
@@ -33,6 +34,6 @@ export class AuthProvider {
   }
 
   isRemitente(){
-    return this.currentUser.tipoUsuario === 1;
+    return this.currentUser.tipoUsuario == 1 ? true : false;
   }
 }

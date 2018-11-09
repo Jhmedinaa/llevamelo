@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthProvider } from '../../providers/auth/auth';
 import { RestServicesProvider } from '../../providers/rest-services/rest-services';
 import { Servicio } from '../../models/servicio-model';
 
 /**
- * Generated class for the RecadosPage page.
+ * Generated class for the PeticionesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,24 +12,23 @@ import { Servicio } from '../../models/servicio-model';
 
 @IonicPage()
 @Component({
-  selector: 'page-recados',
-  templateUrl: 'recados.html',
+  selector: 'page-peticiones',
+  templateUrl: 'peticiones.html',
 })
-export class RecadosPage {
+export class PeticionesPage {
   encomiendas: Servicio[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider, public restService: RestServicesProvider) {
-    console.log('id de usuario' + this.authProvider.currentUser.id);
-  }
-
-  ionViewDidLoad() {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restService: RestServicesProvider) {
     this.getServicios();
   }
 
   getServicios() {
-    this.restService.getServiciosByTransportista(this.authProvider.currentUser.id).subscribe(
+    this.restService.getServiciosByRemitente(3).subscribe(
       encomiendas => this.encomiendas = encomiendas
     );
   }
 
+  getDetalle(item: Servicio) {
+    this.navCtrl.push("GestionarPeticionPage", { data: item });
+  }
 }

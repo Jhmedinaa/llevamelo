@@ -1,9 +1,4 @@
-<!--
-  Generated template for the RecadoDetallePage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar color="secondary">
@@ -16,22 +11,85 @@
 </ion-header>
 
 
-<ion-content padding color="primary" class="content">
+<ion-content class="bg">
+
+  <ion-item color="s-secondary">
+    <p text-center color="secondary">Detalle Servicio</p>
+  </ion-item>
+
+  <ion-item style="background: #cfcfcf;">
+    <button ion-button color="secondary" (click)="onSolicitarService()"> 
+      <ion-icon name="add-circle" margin-right style="font-size: 4em"></ion-icon>
+      Solicitar Servicio
+    </button>
+  </ion-item>
 
   <ion-card>
-    <ion-card-header ion-text text-center>Encomienda Detalle</ion-card-header>
+    <ion-card-header ion-text text-center style="color: white;">Servicio N° {{servicio.id}}</ion-card-header>
     <ion-card-content>
+      <ion-list color="danger">
         <ion-item>
-           <h4>Barrio Destino :{{encomienda.barrioDestino}}</h4> 
-           <h4>Dirección Destino: {{ encomienda.direccionDestino }}</h4>
-           <h4>Barrio Recogida: {{ encomienda.barrioRecogida }}</h4>
-           <h4>Dirección Recogida : {{ encomienda.direccionRecogida }} </h4>
-           <h4>Descripción : {{ encomienda.descripcionPaquete}} </h4>
-           <h4>Valor: {{ encomienda.valor | currency:"$":true:"1.0" }}</h4>
-          <button ion-button color="s-primary"> Aplicar 
-              <ion-icon name="bicycle" margin-left ></ion-icon>
-          </button>
-          </ion-item>
+          <ion-label floating>Nombre Remitente</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.nombreRemitente"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Direccion Remitente</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.direccionRemitente"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Telefono Remitente</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.telefonoRemitente"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Email Remitente</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.emailRemitente"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Nombre Destinatario</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.nombreDestinatario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Direccion Destinatario</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.direccionDestinatario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Telefono Destinatario</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.telefonoDestinatario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Cantidad Documentos</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.cantidadDocumentos"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Cantidad Paquetes</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.cantidadPaquetes"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Peso Paquetes</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.pesoPaquetes"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label floating>Peso Volumetrico</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.pesoVolumetrico"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Fecha y Hora Creacion</ion-label>
+          <ion-input type="text" [(ngModel)]="servicio.fechaHoraCreacion"></ion-input>
+        </ion-item>
+
+      </ion-list>
     </ion-card-content>
   </ion-card>
 

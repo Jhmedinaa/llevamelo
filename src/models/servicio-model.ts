@@ -1,14 +1,23 @@
 export class Servicio {
-    id_remitente: Number;
-    nombre_remitente: string;
-    direccion_remitente: string;
-    telefono_remitente: string;
-    nombre_destinatario: string;
-    direccion_destinatario: string;
-    telefono_detinatario: string;
-    cantidad_documentos: Number;
-    cantidad_paquetes: Number;
-    peso_paquetes: Number;
-    peso_volumetrico_paquetes: string;
-
+    id: string;
+    idRemitente: Number;
+    nombreRemitente: string;
+    direccionRemitente: string;
+    telefonoRemitente: Number;
+    emailRemitente: string;
+    nombreDestinatario: string;
+    direccionDestinatario: string;
+    telefonoDestinatario: Number;
+    cantidadDocumentos: Number;
+    cantidadPaquetes: Number;
+    pesoPaquetes: Number;
+    pesoVolumetrico: Number;
+    estado: Number;
+    fechaHoraCreacion: string;
+    fechaCreacion: string;
+    horaCreacion: string;
+    fechaHoraActualizacion: string;
+    fechaActualizacion: string;
+    horaActualizacion: string;
+    idTransportista: 0;
 }

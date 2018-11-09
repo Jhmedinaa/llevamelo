@@ -17,21 +17,15 @@
 
 
   <ion-list color="s-secondary" sliding=true no-lines>
-    <button class="button-item" ion-item>
-      <h2>Direccion</h2>
-      <h3>Nombre</h3>
-      <p>Contacto</p>
-      <div item-end color="primary" class="estado" style="background: red">
+
+    <button class="button-item" ion-item *ngFor="let encomienda of encomiendas" (click)="getDetalle(encomienda)">
+      <h2>Desde: {{encomienda.direccionRemitente}}</h2>
+      <h3>Hasta: {{encomienda.direccionDestinatario}}</h3>
+      <p>Contacto: {{encomienda.nombreRemitente}} - {{encomienda.telefonoRemitente}}</p>
+      <div item-end color="primary" class="estado" [ngStyle]="{'backgroundColor': encomienda.estado == 1 ? 'red': 'green'}">
       </div>
     </button>
 
-    <button class="button-item" ion-item>
-      <h2>Direccion</h2>
-      <h3>Nombre</h3>
-      <p>Contacto</p>
-      <div item-end color="primary" class="estado" style="background: green">
-      </div>
-    </button>
   </ion-list>
 
 </ion-content>

@@ -1,18 +1,87 @@
-<!--
-  Generated template for the RemitenteServiciosDetallePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>RemitenteServiciosDetalle</ion-title>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>L l é v a m e l o</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="bg">
+
+  <ion-item color="s-secondary">
+    <p text-center color="secondary">Servicio N° {{servicio.id}}</p>
+  </ion-item>
+
+  <ion-item color="s-secondary">
+      <p text-center color="secondary">Estado: {{servicio.estado == 1 ? 'Inicial': 'En gestion'}}</p>
+   </ion-item>
+
+  <ion-list color="danger">
+    <ion-item>
+      <ion-label floating>Nombre Remitente</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.nombreRemitente" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Direccion Remitente</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.direccionRemitente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefono Remitente</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.telefonoRemitente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email Remitente</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.emailRemitente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nombre Destinatario</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.nombreDestinatario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Direccion Destinatario</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.direccionDestinatario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefono Destinatario</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.telefonoDestinatario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Cantidad Documentos</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.cantidadDocumentos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Cantidad Paquetes</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.cantidadPaquetes"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Peso Paquetes</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.pesoPaquetes"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Peso Volumetrico</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.pesoVolumetrico"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fecha y Hora Creacion</ion-label>
+      <ion-input type="text" [(ngModel)] = "servicio.fechaHoraCreacion"></ion-input>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>

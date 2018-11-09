@@ -1,22 +1,33 @@
-<!--
-  Generated template for the RecadosPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar color="ascent">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>L l é v a m e l o</ion-title>
-  </ion-navbar>
+    <ion-navbar color="secondary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>L l é v a m e l o</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
 
-</ion-header>
 
-
-<ion-content color="light"  class="list-avatar-page">
-  <ion-searchbar color="primary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText=""
-    (ionInput)="getItems($event)"></ion-searchbar>
-</ion-content>
+<ion-content class="bg">
+    <ion-searchbar color="s-secondary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText=""
+      (ionInput)="getItems($event)"></ion-searchbar>
+  
+  
+    <ion-list color="s-secondary" sliding=true no-lines>
+      <div *ngFor="let encomienda of encomiendas">
+        <button class="button-item" ion-item *ngIf="encomienda.estado == 3" (click)="getDetalle(encomienda)">
+          <h2>Desde: {{encomienda.direccionRemitente}}</h2>
+          <h3>Hasta: {{encomienda.direccionDestinatario}}</h3>
+          <p>Contacto: {{encomienda.nombreRemitente}} - {{encomienda.telefonoRemitente}}</p>
+          <div item-end color="primary" class="estado" [ngStyle]="{'backgroundColor': encomienda.estado == 1 ? 'red': 'green'}">
+          </div>
+        </button>
+      </div>
+  
+    </ion-list>
+  
+  </ion-content>

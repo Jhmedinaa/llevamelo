@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>L l é v a m e l o</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg">
+  <ion-searchbar color="s-secondary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText=""
+    (ionInput)="getItems($event)"></ion-searchbar>
+
+
+  <ion-list color="s-secondary" sliding=true no-lines>
+    <div *ngFor="let encomienda of encomiendas">
+      <button class="button-item" ion-item *ngIf="encomienda.estado == 2" (click)="getDetalle(encomienda)">
+        <h2>Desde: {{encomienda.direccionRemitente}}</h2>
+        <h3>Hasta: {{encomienda.direccionDestinatario}}</h3>
+        <p>Contacto: {{encomienda.nombreRemitente}} - {{encomienda.telefonoRemitente}}</p>
+        <div item-end color="primary" class="estado" [ngStyle]="{'backgroundColor': encomienda.estado == 1 ? 'red': 'green'}">
+        </div>
+      </button>
+    </div>
+
+  </ion-list>
+
+</ion-content>

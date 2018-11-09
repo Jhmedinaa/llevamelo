@@ -27,10 +27,11 @@ export class MenuPage {
   }
 
   ionViewWillEnter() {
-    if (this.authProvider.isRemitente) {
+    if (this.authProvider.isRemitente()) {
       this.pages = [
         { title: 'Inicio', pageName: 'RemitenteServiciosPage', index: 1, icon: 'home' },
-        { title: 'Nuevo Servcio', pageName: 'PublicarServicioPage', index: 1, icon: 'car' },        
+        { title: 'Nuevo Servcio', pageName: 'PublicarServicioPage', index: 1, icon: 'car' }, 
+        { title: 'Mis Peticiones', pageName: 'PeticionesPage', index: 1, icon: 'clipboard' },        
       ];
 
       this.openPage('RemitenteServiciosPage');
@@ -38,7 +39,7 @@ export class MenuPage {
       this.pages = [
         { title: 'Inicio', pageName: 'MenuTransportistaPage', index: 1, icon: 'home' },
         { title: 'Mis Recados', pageName: 'RecadosPage', index: 2, icon: 'bicycle' },
-        { title: 'Pendientes', pageName: 'PendientesPage', index: 3, icon: 'cube' },
+        { title: 'Realizar Entrega', pageName: 'EntregaPage', index: 3, icon: 'mail-open' },
       ];
 
       this.openPage('MenuTransportistaPage');

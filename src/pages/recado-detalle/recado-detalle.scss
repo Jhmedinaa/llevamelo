@@ -1,15 +1,18 @@
 page-recado-detalle {
-   .content{
+    .bg{
+        background-color: #e0e0e0;
+    }
+
+    .content{
        background-color: #cfcfcf;
-   }
-   .card-header-md{
-    color:white;
-   }
+    }
+
+    .card-header-md{
+     color:white;
+    }
 
 }
 ion-card-header {
     background-color: #29434e;
-    color: white;
-
-    
+    color: white;    
 }

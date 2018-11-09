@@ -10,24 +10,19 @@
 </ion-header>
 
 
-<ion-content color="light"  class="list-avatar-page">
-  <ion-searchbar color="primary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText=""
-    (ionInput)="getItems($event)"></ion-searchbar>
+<ion-content class="bg">
+  <ion-searchbar color="primary" class="searchIcon" placeholder="Buscar..." showCancelButton="true" cancelButtonText="" (ionInput)="getItems($event)"></ion-searchbar>
 
-  <ion-item>
-    <ion-list color="light" sliding=true>
-      <button  ion-item  *ngFor="let encomienda of encomiendas"  (click)="getDetalle(encomienda)">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/usuario.png">
-        </ion-avatar>
-        <h2>{{encomienda.barrioDestino}}</h2>
-        <h3>{{encomienda.valor | currency:"$":true:"1.0" }}</h3>
-        <p>{{encomienda.direccionDestino}}</p>
-        <ion-note item-end>finaliza: 3:43 pm</ion-note>       
-      </button>      
+  <ion-list color="s-secondary" sliding=true no-lines>
 
-    </ion-list>
-  </ion-item>
+    <button class="button-item" ion-item *ngFor="let encomienda of encomiendas" (click)="getDetalle(encomienda)">
+      <h2>Desde: {{encomienda.direccionRemitente}}</h2>
+      <h3>Hasta: {{encomienda.direccionDestinatario}}</h3>
+      <p>Contacto: {{encomienda.nombreRemitente}} - {{encomienda.telefonoRemitente}}</p>
+      <div item-end color="primary" class="estado" [ngStyle]="{'backgroundColor': encomienda.estado == 1 ? 'red': 'green'}">
+      </div>
+    </button>
+
+  </ion-list>
+
 </ion-content>
-
-

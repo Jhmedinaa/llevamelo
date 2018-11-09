@@ -19,47 +19,58 @@
   <form [formGroup]="servicio" (ngSubmit)="onSubmit()">
     <ion-list color="danger">
       <ion-item>
-        <ion-label floating>Nonbre Remitente</ion-label>
+        <ion-label floating>Nombre Remitente</ion-label>
         <ion-input type="text" formControlName="nombre_remitente"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Direccion</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="direccion_remitente"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Telefono</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="telefono_remitente"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Nombre Destinatario</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="nombre_destinatario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Direccion Destinatario</ion-label>
+        <ion-input type="text" formControlName="direccion_destinatario"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Telefono Destinatario</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="telefono_destinatario"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Nunero de Documentos</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Cantidad Documentos</ion-label>
+        <ion-input type="text" formControlName="cantidad_documentos"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Nunero de Paquetes</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Cantidad Paquetes</ion-label>
+        <ion-input type="text" formControlName="cantidad_paquetes"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Peso Paquetes</ion-label>
+        <ion-input type="text" formControlName="peso_paquetes"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Peso Volumetrico</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="peso_volumetrico_paquetes"></ion-input>
       </ion-item>
+
     </ion-list>
     <ion-item color="s-secondary">
-      <button ion-button round full color="secondary"  type="submit" [disabled]="!servicio.valid">
+      <button ion-button round full color="secondary" type="submit" [disabled]="!servicio.valid">
         Registrar
       </button>
     </ion-item>
